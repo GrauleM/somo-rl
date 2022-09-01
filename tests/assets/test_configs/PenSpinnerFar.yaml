@@ -1,0 +1,41 @@
+env_id: PenSpinnerFar-v0
+seed: 0
+alg: SAC
+policy: SACMlpPolicy
+training_timesteps: 20
+eval_cb:
+  n_eval_episodes: 1
+  eval_freq: 18
+checkpoint_cb:
+  save_freq: 10
+max_episode_steps: 7
+action_time: 0.005
+bullet_time_step: 0.0002
+max_torque_rate: 80
+observation_flags:
+  object_pos:
+  object_or:
+  object_or_quat:
+  target_position:
+  target_orientation:
+  target_orientation_quat:
+  position_error:
+  orientation_error:
+  orientation_error_quat:
+  object_velocity:
+  positions: 2
+  velocities: 1
+  tip_pos:
+  angles: 2
+  curvatures: 2
+  applied_input_torques:
+reward_flags:
+  orientation: -100
+  position: -100
+torque_multiplier: 80
+target_position_delta_range:
+  min: [ -0., -0., 0.0 ]
+  max: [ 0., 0., 0.0 ]
+target_orientation_delta_range:
+  min: [0.0, -0., 1.]
+  max: [0.0, 0., 1.1]

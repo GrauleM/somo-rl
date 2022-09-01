@@ -1,0 +1,29 @@
+env_id: AntipodalGripper-v0
+seed: 0
+alg: SAC
+policy: SACMlpPolicy
+training_timesteps: 20
+eval_cb:
+  n_eval_episodes: 1
+  eval_freq: 18
+checkpoint_cb:
+  save_freq: 10
+max_episode_steps: 7
+action_time: 0.01
+bullet_time_step: 0.0002
+max_torque_rate: 50
+observation_flags:
+  box_pos:
+  box_or:
+  box_velocity:
+  positions: 2
+  velocities: 4
+  tip_pos:
+  angles: 3
+  curvatures: 5
+  applied_input_torques:
+  applied_input_height:
+reward_flags:
+  box_height: 1
+torque_multiplier: 100
+planar_only: True

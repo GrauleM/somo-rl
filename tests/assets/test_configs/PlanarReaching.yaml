@@ -1,0 +1,33 @@
+env_id: PlanarReaching-v0
+seed: 0
+alg: SAC
+policy: SACMlpPolicy
+training_timesteps: 20
+eval_cb:
+  n_eval_episodes: 1
+  eval_freq: 18
+checkpoint_cb:
+  save_freq: 10
+max_episode_steps: 7
+action_time: 0.01
+bullet_time_step: 0.0002
+max_torque_rate: 20
+observation_flags:
+  target_pos:
+  target_or:
+  positions: 4
+  velocities: 4
+  tip_pos:
+  tip_target_dist_vector:
+  angles: 4
+  curvatures: 4
+  applied_input_torques:
+reward_flags:
+  tip_target_norm_squared: -1
+  bonus_at_0.1: 10
+  bonus_at_0.05: 20
+torque_multiplier: 50
+target_start_pos: [0, 2.5, 8]
+target_start_or: [0.0, 0.0, 0.0]
+obstacle_scale: 1
+gravity_factor: 0.25

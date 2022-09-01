@@ -1,0 +1,10 @@
+jsonschema==3.2.0
+matplotlib==3.4.1
+numpy==1.20.2
+pybullet==3.1.7
+PyYAML==5.4.1
+scikit-build==0.11.1
+-e git+https://github.com/graulem/somo@main#egg=somo
+sorotraj==0.14
+stable-baselines3[extra]
+pyquaternion

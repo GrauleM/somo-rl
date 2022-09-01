@@ -1,0 +1,27 @@
+env_id: SnakeLocomotionDiscrete-v0
+seed: 0
+alg: SAC
+policy: SACMlpPolicy
+training_timesteps: 20
+eval_cb:
+  n_eval_episodes: 1
+  eval_freq: 18
+checkpoint_cb:
+  save_freq: 10
+max_episode_steps: 7
+action_time: 0.01
+bullet_time_step: 0.0001
+max_torque_rate: 40
+observation_flags:
+  target_pos:
+  positions: 5
+  velocities: 1
+  tip_pos:
+  error:
+  angles: 4
+  curvatures: 4
+  applied_input_torques:
+reward_flags:
+  head_target_dist: -1
+torque_multiplier: 50
+difficulty: basic

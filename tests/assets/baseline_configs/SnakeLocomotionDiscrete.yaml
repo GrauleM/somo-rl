@@ -1,0 +1,11 @@
+env_id: SnakeLocomotionDiscrete-v0
+seed: 0
+alg: SAC
+policy: SACMlpPolicy
+training_timesteps: 20
+eval_cb:
+  n_eval_episodes: 1
+  eval_freq: 18
+checkpoint_cb:
+  save_freq: 10
+max_episode_steps: 7

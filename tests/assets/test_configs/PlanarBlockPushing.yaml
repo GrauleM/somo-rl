@@ -1,0 +1,37 @@
+env_id: PlanarBlockPushing-v0
+seed: 0
+alg: SAC
+policy: SACMlpPolicy
+training_timesteps: 20
+eval_cb:
+  n_eval_episodes: 1
+  eval_freq: 18
+checkpoint_cb:
+  save_freq: 10
+max_episode_steps: 7
+action_time: 0.01
+bullet_time_step: 0.0002
+max_torque_rate: 40
+observation_flags:
+  box_pos:
+  box_or:
+  box_target_dist_vector:
+  box_goal_pos:
+  box_velocity:
+  positions: 4
+  velocities: 4
+  tip_pos:
+  tip_box_dist_vector:
+  angles: 4
+  curvatures: 5
+  applied_input_torques:
+reward_flags:
+  tip_box_dist_squared: -1
+  tip_box_dist_abs: -1
+  box_goal_dist_squared: -1
+  box_goal_dist_abs: -1
+  bonus_at_0.1: 10
+  bonus_at_0.05: 20
+torque_multiplier: 50
+box_start_pos: [3, 6.5, 0.6]
+box_goal_pos: [5, 1, 0.5]
